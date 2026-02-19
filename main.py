@@ -38,7 +38,7 @@ class TelegramBot:
         """Handle /start command"""
         await update.message.reply_text(
             # "Здорова братуха. Ты от Гарегина?.\n"
-            "Ну выкладывай, что там у тебя!"
+            "Здорова братуха. Ты от Гарегина? Ну выкладывай, что там у тебя!"
         )
 
     async def help_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
