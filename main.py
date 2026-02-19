@@ -37,8 +37,8 @@ class TelegramBot:
     async def start_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Handle /start command"""
         await update.message.reply_text(
-            "Привет! Я бот Саныч, использующий DeepSeek R1 для генерации ответов.\n"
-            "Упомяните слово 'Саныч' в чате или ответьте на мое сообщение, и я отвечу!"
+            # "Здорова братуха. Ты от Гарегина?.\n"
+            "Ну выкладывай, что там у тебя!"
         )
 
     async def help_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
