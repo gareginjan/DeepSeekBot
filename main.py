@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Telegram Bot with OpenRouter AI DeepSeek R1 Integration
-Responds to "Саныч" mentions and replies with context memory
+Responds to "Братик" mentions and replies with context memory
 """
 
 import logging
