@@ -44,7 +44,7 @@ class TelegramBot:
     async def help_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Handle /help command"""
         help_text = """
-🤖 Бот Саныч - AI помощник на базе DeepSeek R1
+🤖 Бот Братик - AI помощник на базе DeepSeek R1
 
 Как использовать:
 • Напишите "Братик" в любом сообщении
@@ -89,10 +89,10 @@ class TelegramBot:
             # Check if bot should respond
             should_respond = False
             
-            # Check for "Саныч" mention (case insensitive)
-            if "саныч" in message_text.lower():
+            # Check for "Братик" mention (case insensitive)
+            if "братик" in message_text.lower():
                 should_respond = True
-                logger.info(f"Triggered by 'Саныч' mention in chat {chat_id}")
+                logger.info(f"Triggered by 'Братик' mention in chat {chat_id}")
             
             # Check if this is a reply to bot's message
             if message.reply_to_message and message.reply_to_message.from_user.id == context.bot.id:
@@ -119,7 +119,7 @@ class TelegramBot:
                     # Store bot's response in memory
                     self.message_memory.add_message(chat_id, {
                         'user_id': context.bot.id,
-                        'username': self.bot_username or 'Саныч',
+                        'username': self.bot_username or 'Братик',
                         'text': response,
                         'timestamp': sent_message.date.isoformat(),
                         'message_id': sent_message.message_id,
@@ -142,7 +142,7 @@ class TelegramBot:
             context_messages = []
             
             # Add system message
-            system_prompt = f"""Ты - дружелюбный помощник по имени Саныч. Ты общаешься на русском языке в неформальном стиле.
+            system_prompt = f"""Ты - дружелюбный помощник по имени Братик. Ты общаешься на русском языке в неформальном стиле.
 Отвечай естественно и по делу, учитывая контекст предыдущих сообщений в чате.
 Пользователь {username} обратился к тебе."""
 
